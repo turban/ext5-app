@@ -21,23 +21,38 @@ Ext.define('extapp.view.main.Main', {
 
     items: [{
         xtype: 'panel',
-        bind: {
-            title: '{name}'
-        },
+        title: 'MyApp',
         region: 'west',
-        html: '<ul><li>This area is commonly used for navigation, for example, using a "tree" component.</li></ul>',
         width: 250,
         split: true,
-        tbar: [{
-            text: 'Button',
-            handler: 'onClickButton'
-        }]
+        collapsible: true
     },{
         region: 'center',
-        xtype: 'tabpanel',
-        items:[{
-            title: 'Tab 1',
-            html: '<h2>Content appropriate for the current navigation.</h2>'
-        }]
+        xtype: 'panel',
+
+        
+        layout: {
+            type: 'border'
+        },
+        items: [{
+            region: 'center',
+            xtype: 'panel',
+            flex: 3
+        },{
+            region: 'south',
+            xtype: 'panel',
+            title: 'Code',
+            flex: 1,
+            split: true,
+            collapsible: true,
+            collapsed: true           
+        }]        
+    },{
+        xtype: 'panel',
+        title: 'Right',
+        region: 'east',
+        width: 130,
+        split: true,
+        collapsible: true
     }]
 });
