@@ -20,7 +20,7 @@
     /**
      * The name of the theme for this application.
      */
-    "theme": "ext-theme-crisp-touch",
+    "theme": "ext-theme-crisp-nrk",
 
     /**
      * The list of required packages (with optional versions; default is "latest").
@@ -107,10 +107,6 @@
      *      }
      */
     "js": [
-        {
-            "path": "resources/lib/requirejs/require.js",
-            "bundle": true
-        },
         {
             "path": "app.js",
             "bundle": true
